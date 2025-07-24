@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFresh - Healthy Food Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .calorie-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            backdrop-filter: blur(5px);
+        }
+        .category-btn.active {
+            background-color: #4ade80;
+            color: white;
+        }
+        .nutrition-chart {
+            height: 200px;
+        }
+        @media (max-width: 640px) {
+            .food-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+                <h1 class="text-2xl font-bold text-gray-800">NutriFresh</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-green-600 font-medium">Home</a>
+                <a href="#" class="text-gray-600 hover:text-green-600">Shop</a>
+                <a href="#" class="text-gray-600 hover:text-green-600">About</a>
+                <a href="#" class="text-gray-600 hover:text-green-600">Contact</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="max-w-2xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Fuel Your Body Right</h1>
+                <p class="text-xl text-gray-600 mb-8">Discover delicious, nutrient-packed meals that help you stay healthy without sacrificing flavor.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-6 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition">Shop Now</button>
+                    <button class="px-6 py-3 bg-white text-green-600 border border-green-600 rounded-full font-medium hover:bg-green-50 transition">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filters -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition active" data-category="all">All Items</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="salads">Salads</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="bowls">Bowls</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="wraps">Wraps</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="smoothies">Smoothies</button>
+        </div>
+    </section>
+
+    <!-- Food Grid -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Salad 1 -->
+            <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="salads">
+                <div class="relative">
+                    <img src="https://medcitynews.com/wp-content/uploads/sites/7/2023/05/GettyImages-1457433817-1-600x400.jpg" alt="Fresh Mediterranean salad with mixed greens, cherry tomatoes, cucumber, olives, and feta cheese arranged beautifully" class="w-full h-48 object-cover">
+                    <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">320 cal</div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Mediterranean Salad</h3>
+                    <p class="text-gray-600 mb-4">Crisp greens with tomatoes, cucumber, olives, feta cheese, and olive oil dressing.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-green-600">$8.99</span>
+                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bowl 1 -->
+            <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="bowls">
+                <div class="relative">
+                    <img src="https://www.shutterstock.com/image-photo/woman-holding-plate-vegan-vegetarian-600nw-2141548159.jpg" alt="Buddha bowl with quinoa, roasted vegetables, avocado slices, chickpeas, and tahini dressing" class="w-full h-48 object-cover">
+                    <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">450 cal</div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Harvest Buddha Bowl</h3>
+                    <p class="text-gray-600 mb-4">Quinoa, roasted veggies, avocado, chickpeas, and tahini dressing.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-green-600">$10.99</span>
+                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wrap 1 -->
+            <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="wraps">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400" alt="Healthy wrap with grilled chicken, spinach, shredded carrots, hummus spread, all wrapped in whole wheat tortilla" class="w-full h-48 object-cover">
+                    <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">380 cal</div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Grilled Chicken Wrap</h3>
+                    <p class="text-gray-600 mb-4">Grilled chicken with spinach, carrots, hummus in whole wheat wrap.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-green-600">$7.99</span>
+                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smoothie 1 -->
+            <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="smoothies">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400" alt="Vibrant green smoothie in a glass with spinach, banana, almond milk, chia seeds and garnish of mint leaves" class="w-full h-48 object-cover">
+                    <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">210 cal</div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Green Detox Smoothie</h3>
+                    <p class="text-gray-600 mb-4">Spinach, banana, almond milk, chia seeds, and flaxseed.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-green-600">$5.99</span>
+                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salad 2 -->
+            <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="salads">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400" alt="Colorful Asian salad with shredded cabbage, carrots, edamame, mandarin oranges, and sesame dressing" class="w-full h-48 object-cover">
+                    <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">290 cal</div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Asian Crunch Salad</h3>
+                    <p class="text-gray-600 mb-4">Cabbage, carrots, edamame, mandarin oranges with sesame dressing.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-green-600">$9.49</span>
+                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bowl 2 -->
+            <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="bowls">
+                <div class="relative">
+                    <img src="https://placehold.co/600x400" alt="Mexican-style grain bowl with brown rice, black beans, corn, fresh salsa, avocado, and lime wedge" class="w-full h-48 object-cover">
+                    <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">420 cal</div>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Mexican Fiesta Bowl</h3>
+                    <p class="text-gray-600 mb-4">Brown rice, black beans, corn, salsa, avocado with lime.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-bold text-green-600">$9.99</span>
+                        <button class="px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Info Section -->
+    <section class="bg-green-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nutrition Made Simple</h2>
+                <p class="text-lg text-gray-600">Every meal comes with detailed nutritional information so you can make informed choices about what you eat.</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-6 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Mediterranean Salad Breakdown</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Calories</span>
+                                    <span class="text-sm font-medium text-green-600">320</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 16%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Protein</span>
+                                    <span class="text-sm font-medium text-green-600">14g</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 28%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Carbs</span>
+                                    <span class="text-sm font-medium text-green-600">22g</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 17%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Fat</span>
+                                    <span class="text-sm font-medium text-green-600">23g</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 35%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Fiber</span>
+                                    <span class="text-sm font-medium text-green-600">6g</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 24%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="nutrition-chart bg-gray-50 rounded-lg p-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtEKulxhlZIu0Y5f8tAurz2nx46C7Fjn8eA&s" alt="Nutrition chart showing macronutrient distribution for Mediterranean Salad in colorful pie chart" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="bg-green-600 rounded-xl p-8 md:p-12 text-center text-white">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Healthy Eating Tips</h2>
+            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for recipes, nutrition advice, and exclusive offers.</p>
+            <div class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800">
+                    <button class="px-6 py-3 bg-white text-green-600 rounded-lg font-bold hover:bg-gray-100 transition">Subscribe</button>
+                </div>
+                <p class="text-xs mt-2 text-green-100">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">NutriFresh</h3>
+                    <p class="text-gray-400">Healthy meals made simple for a better you.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">تسوق</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">All Meals</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Seasonal Specials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">About</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Story</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Nutrition Info</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Find a Store</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p
