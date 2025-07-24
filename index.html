@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriFresh - Healthy Food Marketplace</title>
+    <title>FO-fresh-OD</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .food-card:hover {
@@ -38,13 +38,15 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                 </svg>
-                <h1 class="text-2xl font-bold text-gray-800">NutriFresh</h1>
+                <h1 class="text-2xl font-bold text-gray-900">FO</h1>
+                <h6 class="text-2xl font-bold text-green-300">fresh</h6>
+                <h1 class="text-2xl font-bold text-gray-900">OD</h1>
             </div>
             <nav class="hidden md:flex space-x-8">
-                <a href="#" class="text-green-600 font-medium">Home</a>
-                <a href="#" class="text-gray-600 hover:text-green-600">Shop</a>
-                <a href="#" class="text-gray-600 hover:text-green-600">About</a>
-                <a href="#" class="text-gray-600 hover:text-green-600">Contact</a>
+                <a href="#" class="text-green-600 font-medium">الرئيسية</a>
+                <a href="#" class="text-gray-600 hover:text-green-600">تسوق</a>
+                <a href="#" class="text-gray-600 hover:text-green-600">حول</a>
+                <a href="#" class="text-gray-600 hover:text-green-600">اتصال</a>
             </nav>
             <button class="md:hidden text-gray-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,11 +60,11 @@
     <section class="relative">
         <div class="container mx-auto px-4 py-16 md:py-24">
             <div class="max-w-2xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Fuel Your Body Right</h1>
-                <p class="text-xl text-gray-600 mb-8">Discover delicious, nutrient-packed meals that help you stay healthy without sacrificing flavor.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">العقل السليم في الجسم السليم</h1>
+                <p class="text-xl text-gray-600 mb-8">اكتشف وجبات لذيذة ومليئة بالعناصر الغذائية التي تساعدك على البقاء بصحة جيدة دون التضحية بالنكهة.</p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <button class="px-6 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition">Shop Now</button>
-                    <button class="px-6 py-3 bg-white text-green-600 border border-green-600 rounded-full font-medium hover:bg-green-50 transition">Learn More</button>
+                    <button class="px-6 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition">تسوق الآن</button>
+                    <button class="px-6 py-3 bg-white text-green-600 border border-green-600 rounded-full font-medium hover:bg-green-50 transition">تعرف على المزيد</button>
                 </div>
             </div>
         </div>
@@ -71,11 +73,11 @@
     <!-- Category Filters -->
     <section class="container mx-auto px-4 py-8">
         <div class="flex flex-wrap justify-center gap-3 mb-8">
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition active" data-category="all">All Items</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="salads">Salads</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="bowls">Bowls</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="wraps">Wraps</button>
-            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="smoothies">Smoothies</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition active" data-category="all">كل العناصر</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="salads">الوجبات الكاملة</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="bowls">الوجبات الخفيفة </button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="wraps">السلطات</button>
+            <button class="category-btn px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium hover:bg-green-600 hover:text-white transition" data-category="smoothies">العصائر</button>
         </div>
     </section>
 
@@ -85,8 +87,8 @@
             <!-- Salad 1 -->
             <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="salads">
                 <div class="relative">
-                    <img src="https://medcitynews.com/wp-content/uploads/sites/7/2023/05/GettyImages-1457433817-1-600x400.jpg" alt="Fresh Mediterranean salad with mixed greens, cherry tomatoes, cucumber, olives, and feta cheese arranged beautifully" class="w-full h-48 object-cover">
-                    <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">320 cal</div>
+                    <img src="	https://www.shutterstock.com/image-photo/balanced-diet-healthy-foods-woman-600nw-2438480329.jpg" alt="Fresh Mediterranean salad with mixed greens, cherry tomatoes, cucumber, olives, and feta cheese arranged beautifully" class="w-full h-48 object-cover">
+                    <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">320 cal </div>
                 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Mediterranean Salad</h3>
@@ -117,7 +119,7 @@
             <!-- Wrap 1 -->
             <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="wraps">
                 <div class="relative">
-                    <img src="https://placehold.co/600x400" alt="Healthy wrap with grilled chicken, spinach, shredded carrots, hummus spread, all wrapped in whole wheat tortilla" class="w-full h-48 object-cover">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTac0lYOtCK9_HcPiokA4V6DN7JPqBSCmz8pg&s" alt="Healthy wrap with grilled chicken, spinach, shredded carrots, hummus spread, all wrapped in whole wheat tortilla" class="w-full h-48 object-cover">
                     <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">380 cal</div>
                 </div>
                 <div class="p-4">
@@ -133,7 +135,7 @@
             <!-- Smoothie 1 -->
             <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="smoothies">
                 <div class="relative">
-                    <img src="https://placehold.co/600x400" alt="Vibrant green smoothie in a glass with spinach, banana, almond milk, chia seeds and garnish of mint leaves" class="w-full h-48 object-cover">
+                    <img src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFWIBnAMhqTTTwaD8uICy7gFK0MkyaCATBvA&s" alt="Vibrant green smoothie in a glass with spinach, banana, almond milk, chia seeds and garnish of mint leaves" class="w-full h-48 object-cover">
                     <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">210 cal</div>
                 </div>
                 <div class="p-4">
@@ -149,7 +151,7 @@
             <!-- Salad 2 -->
             <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="salads">
                 <div class="relative">
-                    <img src="https://placehold.co/600x400" alt="Colorful Asian salad with shredded cabbage, carrots, edamame, mandarin oranges, and sesame dressing" class="w-full h-48 object-cover">
+                    <img src="	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_GMMB4EwAQ_3m-fLCelHyEYHS4zxlu_9q8A&s" alt="Colorful Asian salad with shredded cabbage, carrots, edamame, mandarin oranges, and sesame dressing" class="w-full h-48 object-cover">
                     <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">290 cal</div>
                 </div>
                 <div class="p-4">
@@ -165,7 +167,7 @@
             <!-- Bowl 2 -->
             <div class="food-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-category="bowls">
                 <div class="relative">
-                    <img src="https://placehold.co/600x400" alt="Mexican-style grain bowl with brown rice, black beans, corn, fresh salsa, avocado, and lime wedge" class="w-full h-48 object-cover">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG5iplP95ONNcsD5OqAooZz8-6xlK51AqMog&s">
                     <div class="calorie-badge bg-white/80 px-3 py-1 rounded-full text-sm font-bold text-green-700">420 cal</div>
                 </div>
                 <div class="p-4">
@@ -184,19 +186,19 @@
     <section class="bg-green-50 py-16">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nutrition Made Simple</h2>
-                <p class="text-lg text-gray-600">Every meal comes with detailed nutritional information so you can make informed choices about what you eat.</p>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">المعلومات الغذائية</h2>
+                <p class="text-lg text-gray-600">تحتوي كل وجبة على معلومات غذائية مفصلة حتى تتمكن من اتخاذ خيارات مدروسة حول ما تأكله</p>
             </div>
             
             <div class="bg-white rounded-xl shadow-md p-6 max-w-4xl mx-auto">
                 <div class="flex flex-col md:flex-row gap-8">
                     <div class="md:w-1/2">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Mediterranean Salad Breakdown</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">سلطة بالدجاج المشوي وصلصة الارز</h3>
                         <div class="space-y-4">
                             <div>
                                 <div class="flex justify-between mb-1">
                                     <span class="text-sm font-medium text-gray-700">Calories</span>
-                                    <span class="text-sm font-medium text-green-600">320</span>
+                                    <span class="text-sm font-medium text-green-600">320 cal</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-2.5">
                                     <div class="bg-green-600 h-2.5 rounded-full" style="width: 16%"></div>
@@ -242,7 +244,7 @@
                     </div>
                     <div class="md:w-1/2 flex flex-col justify-center">
                         <div class="nutrition-chart bg-gray-50 rounded-lg p-4">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtEKulxhlZIu0Y5f8tAurz2nx46C7Fjn8eA&s" alt="Nutrition chart showing macronutrient distribution for Mediterranean Salad in colorful pie chart" class="w-full h-full object-contain">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmZTy-MGvoy_h8IfcdHuiXz61RLG4zHHpYEw&s" alt="Nutrition chart showing macronutrient distribution for Mediterranean Salad in colorful pie chart" class="w-full h-full object-contain">
                         </div>
                     </div>
                 </div>
@@ -253,14 +255,14 @@
     <!-- Newsletter -->
     <section class="container mx-auto px-4 py-16">
         <div class="bg-green-600 rounded-xl p-8 md:p-12 text-center text-white">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Healthy Eating Tips</h2>
-            <p class="mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for recipes, nutrition advice, and exclusive offers.</p>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">احصل على نصائح لتناول الطعام الصحي</h2>
+            <p class="mb-8 max-w-2xl mx-auto">اشترك في الصفحة  لدينا للحصول على وصفات ونصائح غذائية وعروض حصرية.</p>
             <div class="max-w-md mx-auto">
                 <div class="flex flex-col sm:flex-row gap-2">
-                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800">
-                    <button class="px-6 py-3 bg-white text-green-600 rounded-lg font-bold hover:bg-gray-100 transition">Subscribe</button>
+                    <input type="email" placeholder="  عنوان بريديك الالكتروني" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800">
+                    <button class="px-6 py-3 bg-white text-green-600 rounded-lg font-bold hover:bg-gray-100 transition">اشترك</button>
                 </div>
-                <p class="text-xs mt-2 text-green-100">We respect your privacy. Unsubscribe at any time.</p>
+                <p class="text-xs mt-2 text-green-100">نحن نحترم خصوصيتك, يمكنك إلغاء الاشتراك في أي وقت</p>
             </div>
         </div>
     </section>
@@ -270,8 +272,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <h3 class="text-lg font-bold mb-4">NutriFresh</h3>
-                    <p class="text-gray-400">Healthy meals made simple for a better you.</p>
+                    <h3 class="text-lg font-bold mb-4">FO fresh OD</h3>
+                    <p class="text-gray-400">وجبات صحية بسيطة من أجل حياة أفضل</p>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">تسوق</h4>
